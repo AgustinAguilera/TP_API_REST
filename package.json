@@ -1,0 +1,19 @@
+{
+  "name": "tp_api_rest",
+  "version": "1.0.0",
+  "description": "Mi tp de API_REST",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgustinAguilera/TP_API_REST.git"
+  },
+  "author": "Agustin Aguilera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AgustinAguilera/TP_API_REST/issues"
+  },
+  "homepage": "https://github.com/AgustinAguilera/TP_API_REST#readme"
+}
