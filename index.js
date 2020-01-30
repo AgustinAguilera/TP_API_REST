@@ -1,19 +1,21 @@
+require('dotenv').config();
 
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
-const clientesRouter = require('./clientesCRUD/clientesRouter')
+const cursosRouter = require('./cursosCRUD/cursosRouter');
 
 const app = express()
 const port = process.env.port || 8080;
 
 app.use(bodyParser.json());
 
-app.use('/clientes',clientesRouter)
+//  app.use('/cursos',cursosRouter);
 
-app.use('/',(req,res,next) => {res.status(200).json({code: 0, message: "Estas en la pagina de inicio"})});
+app.use('/',(req,res,next) => {res.status(200).json({code: 0, message: "Pagina de inicio"})});
 
-const mongoURI = process.env.mongoURI || "mongodb://localhost:27017/clientes";
+const mongoURI = process.env.mongoURI || "mongodb://localhost:27017/cursos";
 
 mongoose.connect(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
     .then(() => {
