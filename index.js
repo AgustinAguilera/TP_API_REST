@@ -7,13 +7,13 @@ const bodyParser = require('body-parser');
 const cursosRouter = require('./cursosCRUD/cursosRouter');
 
 const app = express()
-const port = process.env.port || 8080;
+const port = process.env.port || 8081;
 
 app.use(bodyParser.json());
 
-//  app.use('/cursos',cursosRouter);
+app.use('/cursos',cursosRouter);
 
-app.use('/',(req,res,next) => {res.status(200).json({code: 0, message: "Pagina de inicio"})});
+app.use('/',(req,res,next) => {res.status(200).json({code: 0, message: "Bienvenido a mi API REST"})});
 
 const mongoURI = process.env.mongoURI || "mongodb://localhost:27017/cursos";
 
