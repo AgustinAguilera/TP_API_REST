@@ -19,7 +19,7 @@
   "homepage": "https://github.com/AgustinAguilera/TP_API_REST#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "mongoose": "^5.8.10",
+    "mongoose": "^5.13.15",
     "nodemon": "^2.0.2"
   }
 }
